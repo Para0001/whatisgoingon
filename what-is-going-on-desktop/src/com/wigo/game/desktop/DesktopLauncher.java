@@ -10,6 +10,7 @@ public class DesktopLauncher {
 		config.title = "What Is Going On?";
 		config.width = 640;
 		config.height = 480;
+		config.resizable = false;
 		new LwjglApplication(new WhatIsGoingOn(), config);
 	}
 }
