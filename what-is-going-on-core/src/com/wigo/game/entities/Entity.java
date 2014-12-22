@@ -1,6 +1,10 @@
 package com.wigo.game.entities;
 
 public class Entity {
+	
 	private float posX, posY;
-	String something = "Something!";
+	
+	
+	
+	public void update(){}
 }

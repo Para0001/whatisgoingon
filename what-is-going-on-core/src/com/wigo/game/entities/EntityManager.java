@@ -1,6 +1,7 @@
 package com.wigo.game.entities;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class EntityManager {
 
@@ -32,4 +33,14 @@ public class EntityManager {
 		return entityList.remove(e);
 	}
 	
+	
+	//Goes through all entities in the EntityList and updates them.
+	//TODO: Should we do two different update methods? (One for Logic, one for Graphics?)
+	public static void update(){
+		Iterator<Entity> i = entityList.iterator();
+		while(i.hasNext()){
+			Entity e = i.next();
+			e.update();
+		}
+	}
 }
