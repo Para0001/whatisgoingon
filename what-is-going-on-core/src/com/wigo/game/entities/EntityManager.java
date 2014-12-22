@@ -31,4 +31,5 @@ public class EntityManager {
 	public static boolean removeEntity(Entity e){
 		return entityList.remove(e);
 	}
+	
 }
