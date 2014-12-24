@@ -3,6 +3,12 @@ package com.wigo.game.entities;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/**
+ * @author pilapodapostache
+ *
+ * @Usage Contains an ArrayList from java.util.ArrayList of Entity objects, and is used to loop through all available
+ * entity objects created and update their logic and graphics based content.
+ */
 public class EntityManager {
 
 	
@@ -11,10 +17,14 @@ public class EntityManager {
 	public static ArrayList<Entity> entityList;
 	private static int entityID;
 	
+	//Singleton: Used to ensure only ONE instance of this object is available
 	protected EntityManager(){
-		this.entityList = new ArrayList<Entity>();
+		EntityManager.entityList = new ArrayList<Entity>();
 	}
 	
+	/**
+	 * @return The instance of the Entity Manager and it it doesn't exist, creates it and returns it.
+	 */
 	public static EntityManager getInstance(){
 		if(instance == null)
 		{
@@ -25,7 +35,10 @@ public class EntityManager {
 			return instance;
 	}
 	
-	public static void addEntity(Entity e){
+	/**
+	 * @param entity - An entity you want to add to the EntityManager
+	 */
+	public static void addEntity(Entity entity){
 		entityList.add(e);
 	}
 	
